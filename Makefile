@@ -1,41 +1,15 @@
 CC = gcc
-LD = gcc
+CFLAGS =-Wall -Wextra -Werror
 
-CFLAGS = -Wall -Wextra -Werror
-OFLAGS = -c -I/usr/include
-LFLAGS = $(CFLAGS) -L/usr/lib/
+all: main
+%.o: %.c %.h
+	$(CC) $(CFLAGS) -c $^
 
-SOURCES = $(wildcard *.c)
-OBJECTS = $(SOURCES:.c=.o)
-
-DEBUG = no
-PROFILE = no
-PEDANTIC = no
-OPTIMIZATION = -O3
-
-ifeq ($(DEBUG), yes)
-	CFLAGS += -g
-	OPTIMIZATION = -O0
-endif
-
-ifeq ($(PROFILE), yes)
-	CFLAGS += -pg
-endif
-
-CFLAGS += $(OPTIMIZATION)
-
-all: project
-
-project: $(OBJECTS)
-	$(CC) $(OBJECTS) $(CFLAGS) -o project
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+main:ft_isalnum.c ft_isdigit.c ft_isalpha.c reverse.c main.c
+	@echo "Compling main file"
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	rm -rf *.o project
+	@echo "Removing everything but not the sourcefile"
+	@rm -rf *.o main
 
-rebuild: clean all
-
-.PHONY : clean
-.SILENT : clean
