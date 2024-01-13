@@ -1,5 +1,6 @@
 #include "libft.h"
 #include <stdio.h>
+#include <stddef.h>
 
 int	main(int argc, char **argv)
 {
@@ -41,5 +42,12 @@ int	main(int argc, char **argv)
 			printf("from alnum: char  %c is not alnum\n", t[k]);
 		k++;
 	}
+	 /*memset test*/
+//	int		printf(const char*, ...);
+		char	buf[0xff];
+		ft_memset(buf,0,0xff);
+		ft_memset(buf,'A', 20);
+		ft_memset(buf + 20, 'B', 20);
+		printf("%s\n",buf);
 	return 0;
 }
