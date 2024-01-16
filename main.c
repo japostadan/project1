@@ -49,5 +49,9 @@ int	main(int argc, char **argv)
 		ft_memset(buf,'A', 20);
 		ft_memset(buf + 20, 'B', 20);
 		printf("%s\n",buf);
+
+		printf("from toupper: %d\n",ft_toupper('s'));
+		printf("from tolower: %d\n",ft_tolower('A'));
+
 	return 0;
 }
