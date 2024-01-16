@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 11:16:36 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/16 20:48:00 by jpostada         ###   ########.fr       */
+/*   Created: 2024/01/16 20:19:16 by jpostada          #+#    #+#             */
+/*   Updated: 2024/01/16 20:36:15 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	char	*a;
-	const char	*b;
-	size_t i;
-	b = src;
-	a = dst;
-	i = 0;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	offset;
+	size_t	i;
 
-	if (!dst && !src)
-		return (0);
-	while (i < n)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	offset = dst_len;
+	while (*(src + i) != '\0')
 	{
-		*a++ = *b++;
-		n--;
+		*(dst + offset) = *(src + i);
+		i++;
+		offset++;
+		if (offset == dstsize -1)
+			break ;
 	}
-	return (dst);
+	*(dst + offset) = '\0';
+	return (dst_len + src_len);
 }

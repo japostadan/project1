@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:39:49 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/15 12:01:53 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/16 20:35:54 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ size_t	ft_strlen (const char *s);
 void	*ft_memset (void *b, int c,size_t len);
 void	ft_bzero (void *s, size_t n);
 void	*ft_memcpy (void *restrict dst, const void *restrict src, size_t n); 
+size_t	ft_strlcpy (char *restrict dst, const char *restrict src, size_t dstsize);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
 #endif
