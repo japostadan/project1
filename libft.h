@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:39:49 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/16 21:14:24 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/18 11:43:09 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,8 @@ size_t	ft_strlcpy (char *restrict dst, const char *restrict src, size_t dstsize)
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *s,int c);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 #endif

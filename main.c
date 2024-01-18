@@ -4,6 +4,7 @@
 
 int	main(int argc, char **argv)
 {
+	
 	if (argc > 0)
 	{
 		printf("%s\n", argv[1]);
@@ -42,8 +43,9 @@ int	main(int argc, char **argv)
 			printf("from alnum: char  %c is not alnum\n", t[k]);
 		k++;
 	}
-	 /*memset test*/
-//	int		printf(const char*, ...);
+
+	// memset test
+//int		printf(const char*, ...);
 		char	buf[0xff];
 		ft_memset(buf,0,0xff);
 		ft_memset(buf,'A', 20);
@@ -52,6 +54,17 @@ int	main(int argc, char **argv)
 
 		printf("from toupper: %d\n",ft_toupper('s'));
 		printf("from tolower: %d\n",ft_tolower('A'));
+		char l[] = "https://www.tutorialspoint.com";
+		const char ch = 'c';
+		char *ret;
+		ret = strchr(l, ch);
 
+		char *p;
+		p = l;
+
+
+
+   //printf("String after |%c| is - |%s|\n", ch, ret);
+   printf("%s\n",ft_strchr(p,ch));
 	return 0;
 }
