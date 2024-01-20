@@ -66,5 +66,14 @@ int	main(int argc, char **argv)
 
    //printf("String after |%c| is - |%s|\n", ch, ret);
    printf("%s\n",ft_strchr(p,ch));
+
+  
+    const char haystack[20] = "TutorialsPoint";
+    const char needle[10] = "to";
+    char *result;
+
+    result = ft_strnstr(haystack, needle, 4);
+    printf("The substring is: %s\n", result);
+
 	return 0;
 }

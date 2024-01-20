@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:07:02 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/18 11:29:32 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/20 13:08:45 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main(void)
 {
 	const char *s = "This is a string";
@@ -37,3 +37,4 @@ int main(void)
 	printf("Fake :The reamainder of s after char 'r' is found \"%s" "\n",
 			(char *) ft_memchr(s, 'r', 16));
 	}
+*/
