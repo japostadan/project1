@@ -6,9 +6,11 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 20:33:34 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/13 10:39:09 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/21 11:49:11 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

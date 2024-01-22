@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 11:46:23 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/21 12:19:08 by jpostada         ###   ########.fr       */
+/*   Created: 2024/01/22 10:07:48 by jpostada          #+#    #+#             */
+/*   Updated: 2024/01/22 10:46:16 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	ft_memset(s, '\0', n);
-}
+
