@@ -6,17 +6,17 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:07:02 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/20 13:08:45 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:36:02 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+/*#include <string.h>*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (i < n)
 	{

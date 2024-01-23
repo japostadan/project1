@@ -6,14 +6,14 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 21:11:50 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/16 21:13:25 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:54:43 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return ( c + 32);
+		return (c + 32);
 	else
 		return (c);
 }

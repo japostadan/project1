@@ -6,17 +6,16 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 11:26:09 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/20 13:04:58 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:51:49 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle,size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (!*needle)
@@ -24,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle,size_t len)
 	while (haystack[i] != '\0')
 	{
 		j = 0;
-		while (haystack[i + j] ==  needle[j] && (i + j) < len)
+		while (haystack[i + j] == needle[j] && (i + j) < len)
 		{
 			if (haystack[i + j] == '\0' && needle[j] == '\0')
 				return ((char *)&haystack[i]);
@@ -36,7 +35,6 @@ char	*ft_strnstr(const char *haystack, const char *needle,size_t len)
 	}
 	return (0);
 }
-
 /*
  int main () {
     const char haystack[100] = "the test file to test to";

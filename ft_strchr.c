@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 21:22:47 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/16 21:51:00 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:43:04 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	while (*s != '\0' && c != *s)
 		s++;
 	if (*s == c)
-			return ((char *)s);
+		return ((char *)s);
 	return (0);
 }
