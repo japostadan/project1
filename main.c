@@ -54,7 +54,7 @@ int	main(int argc, char **argv)
 
 		printf("from toupper: %d\n",ft_toupper('s'));
 		printf("from tolower: %d\n",ft_tolower('A'));
-		char l[] = "https://www.tutorialspoint.com";
+		char l[] = "https://www.testme.com";
 		const char ch = 'c';
 		char *ret;
 		ret = strchr(l, ch);
@@ -66,14 +66,17 @@ int	main(int argc, char **argv)
 
    //printf("String after |%c| is - |%s|\n", ch, ret);
    printf("%s\n",ft_strchr(p,ch));
-
-  
-    const char haystack[20] = "this is to test";
+ 	const char haystack[100] = "the test file to test to";
     const char needle[10] = "to";
     char *result;
+	char *test;
 
-    result = ft_strnstr(haystack, needle, 4);
-    printf("The substring is: %s\n", result);
+    result = ft_strnstr(haystack, needle, 100);
+    printf("The str from ft_strnstr  is: %s\n", result);
+
+    test = strnstr(haystack, needle, 100);
+    printf("The substring from strnstr is: %s\n", test);
+  
 	const char *str1 = "12345";
     int result1 = atoi(str1);
     printf("Test Case 1: String: \"%s\", Result: %d\n", str1, result1);
@@ -112,6 +115,11 @@ int	main(int argc, char **argv)
 	int fnatoi;
 
 	fnatoi = ft_atoi(iftatoi);
-	printf("%d",fnatoi);
+	printf("%d\n",fnatoi);
+	const char *s1 = "test";
+	const char *s2 = "me";
+	char *z = ft_strjoin(s1,s2);
+	//Test ft_strjoin
+	printf("result: %s\n",z);
 	return 0;
 }
