@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 21:22:47 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/24 11:44:15 by jpostada         ###   ########.fr       */
+/*   Created: 2024/01/24 12:02:29 by jpostada          #+#    #+#             */
+/*   Updated: 2024/01/24 12:26:53 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
- * locate a char in a given string
- * then return a pointer to it
- * if found
- *
+ * allocate sufficient memory for 
+ * the copy of the string s1
+ * and returns the pointer to it
  */
-char	*ft_strchr(const char *s, int c)
+
+char	*ft_strdup(const char *s1)
 {
-	while (*s != '\0' && c != *s)
-		s++;
-	if (*s == c)
-		return ((char *)s);
-	return (0);
+	const char	*new_s;
+
+	if (!s1)
+		return (0);
+	new_s = (char *)malloc(sizeof(ft_strlen(s1)));
+	while (s1--)
+	{
+		new_s++ = s1++;
+	}
+	return (new_s);
 }

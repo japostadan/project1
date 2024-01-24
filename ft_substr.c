@@ -6,22 +6,27 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 10:07:48 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/23 17:20:50 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/01/24 11:39:02 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>*/
+/*#include <stdio.h>
+ *	
+ * function that accepts a string and where to start and the length
+ * of the substring that will be returned
+ * then return the substring with the null terminator
+ * */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	c;
 
-	sub = (char *) malloc((len + 1) * sizeof(char));
 	c = 0;
-	if (sub == NULL)
-		return (0);
+	if (!*s || !len || (start > ft_strlen(s)))
+		return (NULL);
+	sub = (char *) malloc((len + 1) * sizeof(char));
 	while (c < len)
 	{
 		sub[c] = s[start + c];
