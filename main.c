@@ -121,26 +121,8 @@ int	main(int argc, char **argv)
 	const char *s2 = "me";
 	char *z = ft_strjoin(s1,s2);
 	//Test ft_strjoin
-	printf("result: %s\n",z);
-    const char *input_string = "Hello,World,This,Is,A,Test";
-    char delimiter = ',';
-
-    // Test the ft_split function
-    char **sp_result = ft_split(input_string, delimiter);
-
-    // Check if the result is not NULL
-    if (sp_result != NULL) {
-        // Print each word in the split result
-        for (int i = 0; sp_result[i] != NULL; i++) {
-            printf("Word %d: %s\n", i + 1, sp_result[i]);
-        }
-
-        // Free the memory allocated for the split result
-        free(sp_result);
-    } else {
-        printf("Input string is NULL. Cannot split.\n");
-    }
-	printf("str convertion is : %s",ft_itoa(-2132132));
+	printf("result from join: %s\n",z);
+	printf("str convertion is : %s\n",ft_itoa(-2132132));
 
 	return (0);
 }
