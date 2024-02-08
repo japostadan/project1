@@ -3,14 +3,10 @@
 #include <stddef.h>
 
 
-int	main(int argc, char **argv)
+int	main()
 {
 	
-	if (argc > 0)
-	{
-		printf("%s\n", argv[1]);
-		printf("%s\n", reverse(argv[1]));
-	}
+	
 
 	int i = 0;
 	char str[] = "test";

@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:56:49 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/24 12:26:57 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:02:55 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
  */
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*s;
 	unsigned int	i;
 
 	if (!s1 || !set)

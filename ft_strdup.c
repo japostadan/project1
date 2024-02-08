@@ -6,7 +6,7 @@
 /*   By: jpostada <jpostada@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 12:02:29 by jpostada          #+#    #+#             */
-/*   Updated: 2024/01/24 12:26:53 by jpostada         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:17:38 by jpostada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,18 @@
 
 char	*ft_strdup(const char *s1)
 {
-	const char	*new_s;
+	char	*new_s;
+	size_t	i;
 
+	i = 0;
 	if (!s1)
 		return (0);
 	new_s = (char *)malloc(sizeof(ft_strlen(s1)));
-	while (s1--)
+	while (s1[i])
 	{
-		new_s++ = s1++;
+		new_s[i] = s1[i];
+		i++;
 	}
+	new_s[i] = '\0';
 	return (new_s);
 }

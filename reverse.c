@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <string.h>
 
 char	*reverse(char *s)
 {
